@@ -15,24 +15,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-green-50 font-sans">
+<body class="bg-green-50">
 
     <!-- Navbar -->
-    <header class="bg-white shadow p-4 flex justify-between items-center">
+     
+    <header class="bg-white shadow p-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
         <div class="flex items-center gap-2">
             <img src="./assets/logo.png" alt="BD" class="w-8 mx-auto mb-2">
             <h1 class="text-lg font-bold text-green-700">Emergency <br> Service</h1>
         </div>
         <div class="flex items-center gap-10">
             <div class="flex items-center gap-2 bg-[#41FF6B]/10 px-6 py-2 rounded-xl">
-                <span>0</span>
+                <span id="heartCount">0</span>
                 <img src="./assets/heart.png" alt="" class="w-6">
             </div>
             <div class="flex items-center gap-2 bg-[#41FF6B]/10 px-6 py-2 rounded-xl">
                 <span>100</span>
                 <img src="./assets/coin.png" alt="" class="w-6">
             </div>
-            <button class="bg-[#00A63E] text-white px-6 py-2 rounded-xl"> Copy</button>
+            <button class="bg-[#00A63E] text-white px-6 py-2 rounded-xl"><span id="copyCount">0</span> Copy</button>
         </div>
     </header>
 
@@ -55,7 +56,7 @@
             <div class="bg-white shadow rounded-lg p-4">
                 <div class="flex justify-between items-center">
                     <img src="./assets/emergency.png" alt="" class="w-10 bg-[#FFE3E2] p-1 rounded-xl">
-                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button class="heart"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <h3 class="font-bold text-2xl mt-2">National Emergency Number</h3>
                 <p class="text-gray-500 text-[18px]">National Emergency</p>
@@ -214,6 +215,8 @@
             </div>
         </div>
     </main>
+
+    <script src="Javascript.js"></script>
 </body>
 
 </html>
